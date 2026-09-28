@@ -162,7 +162,7 @@ const Dashboard = () => {
             </header>
 
             {/* Main Container */}
-            <main className="relative z-10 mx-auto flex min-h-0 w-full max-w-md flex-1 flex-col overflow-hidden px-4 py-3 sm:px-6 sm:py-5">
+            <main className="relative z-10 mx-auto flex min-h-0 w-full max-w-md sm:max-w-lg flex-1 flex-col overflow-hidden px-4 py-3 sm:px-6 sm:py-5">
                 <div className="min-h-0 flex-1">
                     {/* Hero Financial Metric */}
                     <div className="relative h-auto overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-900/40 p-5 shadow-2xl backdrop-blur-md sm:p-8">
