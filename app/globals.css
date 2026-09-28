@@ -50,25 +50,29 @@
         @apply border-border outline-ring/50;
         }
 
-    body {
-        @apply bg-[#020617] text-slate-100 antialiased select-none min-h-dvh flex flex-col m-0 p-0 max-h-dvh;
+    html {
+        @apply h-full bg-[#020617] font-sans;
         }
 
-    html {
-        @apply font-sans h-full bg-[#020617];
+    body {
+        @apply m-0 h-full min-h-0 overflow-hidden bg-[#020617] p-0 text-slate-100 antialiased select-none;
+        }
+
+    #__next {
+        @apply h-full min-h-0;
         }
     }
 
 @layer components {
     .input-container {
-        @apply w-full rounded-xl border border-slate-800/80 bg-slate-950/80 pl-10 pr-3.5 py-3 text-sm text-slate-100 placeholder:text-slate-500 transition focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500/50;
+        @apply w-full rounded-xl border border-slate-800/80 bg-slate-950/80 py-3 pl-10 pr-3.5 text-sm text-slate-100 placeholder:text-slate-500 transition focus:border-emerald-500/50 focus:outline-none focus:ring-1 focus:ring-emerald-500;
         }
 
     .btn {
-        @apply w-full flex items-center justify-center gap-2 rounded-xl bg-emerald-500 py-3.5 px-4 text-sm font-bold text-slate-950 transition hover:bg-emerald-400 active:scale-[0.98] disabled:opacity-50 shadow-lg shadow-emerald-500/20 cursor-pointer;
+        @apply flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-emerald-500 px-4 py-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-emerald-500/20 transition hover:bg-emerald-400 active:scale-[0.98] disabled:opacity-50;
         }
 
     .glass-card {
-        @apply bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-3xl shadow-2xl;
+        @apply rounded-3xl border border-slate-800/80 bg-slate-900/40 shadow-2xl backdrop-blur-md;
         }
     }

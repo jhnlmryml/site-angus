@@ -1,5 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Noto_Sans, Raleway } from "next/font/google";
+import {
+    Geist,
+    Geist_Mono,
+    Noto_Sans,
+    Raleway,
+} from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toast";
@@ -44,22 +49,22 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
                                        children,
-                                   }: {
+                                   }: Readonly<{
     children: React.ReactNode;
-}) {
+}>) {
     return (
         <html
             lang="en"
             suppressHydrationWarning
             className={cn(
-                "h-full antialiased font-sans select-none dark",
+                "h-full select-none font-sans antialiased dark",
                 geistSans.variable,
                 geistMono.variable,
                 raleway.variable,
                 notoSansHeading.variable
             )}
         >
-        <body className="min-h-full flex flex-col bg-[#020617] text-slate-100 antialiased">
+        <body className="h-full min-h-0 overflow-hidden bg-[#020617] text-slate-100 antialiased">
         <AuthProvider>
             {children}
             <Toaster />

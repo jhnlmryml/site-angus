@@ -10,7 +10,7 @@ export default function Home() {
 
     if (loading) {
         return (
-            <div className="flex min-h-dvh w-full items-center justify-center bg-[#020617]">
+            <div className="flex h-dvh max-h-dvh w-full items-center justify-center overflow-hidden bg-[#020617]">
                 <div className="relative flex items-center justify-center">
                     <div className="h-10 w-10 rounded-full border-2 border-emerald-500/20 border-t-emerald-500 animate-spin" />
                 </div>
@@ -19,7 +19,7 @@ export default function Home() {
     }
 
     return (
-        <main className="flex min-h-dvh w-full flex-col items-center justify-center bg-[#020617] ">
+        <main className="flex h-dvh max-h-dvh w-full flex-col items-center justify-center overflow-hidden bg-[#020617]">
             {user ? <Dashboard /> : <LoginCard />}
         </main>
     );
